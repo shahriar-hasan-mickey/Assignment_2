@@ -8,39 +8,40 @@
 
 
     <LinearLayout
-        android:layout_width="290dp"
-        android:layout_height="310dp"
-        android:orientation="vertical"
         android:id="@+id/keypad"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="30dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.890"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.650">
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:id="@+id/row1"
             android:layout_width="match_parent"
-            android:layout_height="78dp"
+            android:layout_height="60dp"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/key1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="2dp"
+                android:layout_marginRight="3dp"
                 android:layout_weight="3"
-                android:padding="25dp"
+                android:padding="15dp"
                 android:text="1"></Button>
 
             <Button
                 android:id="@+id/key2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="2dp"
+                android:layout_marginRight="3dp"
                 android:layout_weight="3"
-                android:padding="25dp"
+                android:padding="15dp"
                 android:text="2"></Button>
 
             <Button
@@ -48,7 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:padding="25dp"
+                android:padding="15dp"
                 android:text="3"></Button>
 
         </LinearLayout>
@@ -56,27 +57,26 @@
         <LinearLayout
             android:id="@+id/row2"
             android:layout_width="match_parent"
-            android:layout_height="78dp"
+            android:layout_height="60dp"
             android:orientation="horizontal">
-
 
 
             <Button
                 android:id="@+id/key4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="2dp"
+                android:layout_marginRight="3dp"
                 android:layout_weight="3"
-                android:padding="25dp"
+                android:padding="15dp"
                 android:text="4"></Button>
 
             <Button
                 android:id="@+id/key5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="2dp"
+                android:layout_marginRight="3dp"
                 android:layout_weight="3"
-                android:padding="25dp"
+                android:padding="15dp"
                 android:text="5"></Button>
 
             <Button
@@ -84,7 +84,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:padding="25dp"
+                android:padding="15dp"
                 android:text="6"></Button>
 
         </LinearLayout>
@@ -92,25 +92,25 @@
         <LinearLayout
             android:id="@+id/row3"
             android:layout_width="match_parent"
-            android:layout_height="78dp"
+            android:layout_height="60dp"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/key7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="2dp"
+                android:layout_marginRight="3dp"
                 android:layout_weight="3"
-                android:padding="25dp"
+                android:padding="15dp"
                 android:text="7"></Button>
 
             <Button
                 android:id="@+id/key8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="2dp"
+                android:layout_marginRight="3dp"
                 android:layout_weight="3"
-                android:padding="25dp"
+                android:padding="15dp"
                 android:text="8"></Button>
 
             <Button
@@ -118,7 +118,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:padding="25dp"
+                android:padding="15dp"
                 android:text="9"></Button>
 
         </LinearLayout>
@@ -126,25 +126,25 @@
         <LinearLayout
             android:id="@+id/row4"
             android:layout_width="match_parent"
-            android:layout_height="78dp"
+            android:layout_height="60dp"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/key0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="2dp"
+                android:layout_marginRight="3dp"
                 android:layout_weight="1"
-                android:padding="25dp"
+                android:padding="15dp"
                 android:text="0"></Button>
 
             <Button
                 android:id="@+id/clearKey"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="2dp"
-                android:layout_weight="15"
-                android:padding="25dp"
+                android:layout_marginRight="3dp"
+                android:layout_weight="405"
+                android:padding="15dp"
                 android:text="Clear"></Button>
 
 
@@ -155,26 +155,26 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
         android:text="Taka: "
         android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.226" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:layout_width="65dp"
-        android:layout_height="362dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintBaseline_toBottomOf="parent"
         app:layout_constraintBaseline_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/keypad"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintLeft_toLeftOf="@id/guideline"
         app:layout_constraintLeft_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintTop_toTopOf="@+id/keypad"
         app:layout_constraintVertical_bias="0.671">
 
 
@@ -182,73 +182,81 @@
             android:id="@+id/tk500"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="500: "
             android:gravity="right"
-            android:textSize="30dp"></TextView>
+            android:text="500: "
+            android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/tk200"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="200: "
+            android:layout_marginTop="10dp"
             android:gravity="right"
-            android:textSize="30dp"></TextView>
+            android:text="200: "
+            android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/tk100"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="100: "
+            android:layout_marginTop="10dp"
             android:gravity="right"
-            android:textSize="30dp"></TextView>
+            android:text="100: "
+            android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/tk50"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="50: "
+            android:layout_marginTop="10dp"
             android:gravity="right"
-            android:textSize="30dp"></TextView>
+            android:text="50: "
+            android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/tk20"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="20: "
+            android:layout_marginTop="10dp"
             android:gravity="right"
-            android:textSize="30dp"></TextView>
+            android:text="20: "
+            android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/tk10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="10: "
+            android:layout_marginTop="10dp"
             android:gravity="right"
-            android:textSize="30dp"></TextView>
+            android:text="10: "
+            android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/tk5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="5: "
+            android:layout_marginTop="10dp"
             android:gravity="right"
-            android:textSize="30dp"></TextView>
+            android:text="5: "
+            android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/tk2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="2: "
+            android:layout_marginTop="10dp"
             android:gravity="right"
-            android:textSize="30dp"></TextView>
+            android:text="2: "
+            android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/tk1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="1: "
+            android:layout_marginTop="10dp"
             android:gravity="right"
-            android:textSize="30dp"></TextView>
+            android:text="1: "
+            android:textSize="20dp"></TextView>
     </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
@@ -256,5 +264,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="78dp" />
+        app:layout_constraintGuide_begin="53dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
