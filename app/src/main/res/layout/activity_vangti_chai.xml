@@ -12,10 +12,10 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
-        android:layout_marginLeft="30dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/LLtextView"
         app:layout_constraintVertical_bias="0.0">
@@ -23,7 +23,7 @@
         <LinearLayout
             android:id="@+id/row1"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Button
@@ -32,9 +32,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="3dp"
                 android:layout_weight="3"
+                android:onClick="key1"
                 android:padding="15dp"
-                android:text="1"
-                android:onClick="key1"></Button>
+                android:text="1"></Button>
 
             <Button
                 android:id="@+id/key2"
@@ -58,7 +58,7 @@
         <LinearLayout
             android:id="@+id/row2"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
 
@@ -93,7 +93,7 @@
         <LinearLayout
             android:id="@+id/row3"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Button
@@ -127,24 +127,24 @@
         <LinearLayout
             android:id="@+id/row4"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/key0"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="3dp"
-                android:layout_weight="1"
+                android:layout_weight="6"
                 android:padding="15dp"
                 android:text="0"></Button>
 
             <Button
                 android:id="@+id/clearKey"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="3dp"
-                android:layout_weight="405"
+                android:layout_weight="3"
                 android:padding="15dp"
                 android:text="Clear"></Button>
 
@@ -178,24 +178,134 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:text="0"
             android:textSize="30dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="240dp"
         android:orientation="vertical"
         app:layout_constraintBaseline_toBottomOf="parent"
         app:layout_constraintBaseline_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="@+id/keypad"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintLeft_toLeftOf="@id/guideline"
-        app:layout_constraintLeft_toRightOf="parent"
 
+        app:layout_constraintLeft_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/keypad"
+        app:layout_constraintVertical_bias="0.671">
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="500: "
+                android:textSize="20dp"></TextView>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="right"
+                android:text="200: "
+                android:textSize="20dp"></TextView>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="right"
+                android:text="100: "
+                android:textSize="20dp"></TextView>
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="right"
+                android:text="50: "
+                android:textSize="20dp"></TextView>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="right"
+                android:text="20: "
+                android:textSize="20dp"></TextView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="right"
+                android:text="10: "
+                android:textSize="20dp"></TextView>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="right"
+                android:text="5: "
+                android:textSize="20dp"></TextView>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="right"
+                android:text="2: "
+                android:textSize="20dp"></TextView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="right"
+                android:text="1: "
+                android:textSize="20dp"></TextView>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutAmount"
+        android:layout_width="60dp"
+        android:layout_height="240dp"
+        android:layout_marginEnd="38dp"
+        android:orientation="vertical"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintBaseline_toTopOf="parent"
+
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
         app:layout_constraintVertical_bias="0.671">
 
 
@@ -203,81 +313,90 @@
             android:id="@+id/tk500"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="right"
-            android:text="500: "
+
+            android:gravity="left"
+            android:text="0"
             android:textSize="20dp"></TextView>
+
 
         <TextView
             android:id="@+id/tk200"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="right"
-            android:text="200: "
+            android:layout_weight="2"
+            android:gravity="left"
+            android:text="0"
             android:textSize="20dp"></TextView>
+
 
         <TextView
             android:id="@+id/tk100"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="right"
-            android:text="100: "
+            android:layout_weight="2"
+            android:gravity="left"
+            android:text="0"
             android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/tk50"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="right"
-            android:text="50: "
+            android:layout_weight="2"
+            android:gravity="left"
+            android:text="0"
             android:textSize="20dp"></TextView>
+
 
         <TextView
             android:id="@+id/tk20"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="right"
-            android:text="20: "
+            android:layout_weight="2"
+            android:gravity="left"
+            android:text="0"
             android:textSize="20dp"></TextView>
+
 
         <TextView
             android:id="@+id/tk10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="right"
-            android:text="10: "
+            android:layout_weight="2"
+            android:gravity="left"
+            android:text="0"
             android:textSize="20dp"></TextView>
+
 
         <TextView
             android:id="@+id/tk5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="right"
-            android:text="5: "
+            android:layout_weight="2"
+            android:gravity="left"
+            android:text="0"
             android:textSize="20dp"></TextView>
+
 
         <TextView
             android:id="@+id/tk2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="right"
-            android:text="2: "
+            android:layout_weight="2"
+            android:gravity="left"
+            android:text="0"
             android:textSize="20dp"></TextView>
+
 
         <TextView
             android:id="@+id/tk1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="right"
-            android:text="1: "
+            android:layout_weight="2"
+            android:gravity="left"
+            android:text="0"
             android:textSize="20dp"></TextView>
+
     </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
