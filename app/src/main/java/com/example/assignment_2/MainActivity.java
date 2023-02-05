@@ -22,7 +22,10 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 Intent tovangtichai = new Intent(MainActivity.this, VangtiChai.class);
                 startActivity(tovangtichai);
+                // This finish() function is called so that when back space is pressed it does not return to this activity again
+                // this method actually gets rid of the piling up of activity in the stack by closing them
+                finish();
             }
-        }, 2000);
+        }, 0);
     }
 }
