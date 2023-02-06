@@ -26,6 +26,6 @@ public class MainActivity extends AppCompatActivity {
                 // this method actually gets rid of the piling up of activity in the stack by closing them
                 finish();
             }
-        }, 0);
+        }, 2000);
     }
 }

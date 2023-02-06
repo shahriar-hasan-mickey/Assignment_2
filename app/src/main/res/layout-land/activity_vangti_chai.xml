@@ -15,7 +15,7 @@
         android:layout_marginRight="40dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/LLtextView">
 
         <LinearLayout
@@ -184,218 +184,214 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="85dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="50dp"
         android:layout_height="240dp"
         android:orientation="vertical"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintBaseline_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="@+id/keypad"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.75"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
 
         app:layout_constraintTop_toTopOf="@+id/keypad"
-        app:layout_constraintVertical_bias="0.803">
+        app:layout_constraintVertical_bias="0.671">
 
-        <LinearLayout
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="500: "
+            android:textSize="20dp"></TextView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="right"
+            android:text="200: "
+            android:textSize="20dp"></TextView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="right"
+            android:text="100: "
+            android:textSize="20dp"></TextView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="right"
+            android:text="50: "
+            android:textSize="20dp"></TextView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="right"
+            android:text="20: "
+            android:textSize="20dp"></TextView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="right"
+            android:text="10: "
+            android:textSize="20dp"></TextView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="right"
+            android:text="5: "
+            android:textSize="20dp"></TextView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="right"
+            android:text="2: "
+            android:textSize="20dp"></TextView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="right"
+            android:text="1: "
+            android:textSize="20dp"></TextView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutAmount"
+        android:layout_width="60dp"
+        android:layout_height="240dp"
+        android:layout_marginEnd="38dp"
+        android:orientation="vertical"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintBaseline_toTopOf="parent"
+
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.671">
+
+        <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="15dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:text="500: "
-                android:textSize="20dp"></TextView>
 
             <TextView
                 android:id="@+id/tk500"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+
                 android:gravity="left"
                 android:text="0"
                 android:textSize="20dp"></TextView>
-        </LinearLayout>
 
-        <LinearLayout
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/tk200"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="left"
+            android:text="0"
+            android:textSize="20dp"></TextView>
 
-            <TextView
-                android:layout_width="15dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:text="200: "
-                android:textSize="20dp"></TextView>
 
-            <TextView
-                android:id="@+id/tk200"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="left"
-                android:text="0"
-                android:textSize="20dp"></TextView>
-        </LinearLayout>
-
-        <LinearLayout
+        <TextView
+            android:id="@+id/tk100"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="left"
+            android:text="0"
+            android:textSize="20dp"></TextView>
 
-            <TextView
-                android:layout_width="15dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:text="100: "
-                android:textSize="20dp"></TextView>
-
-            <TextView
-                android:id="@+id/tk100"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="left"
-                android:text="0"
-                android:textSize="20dp"></TextView>
-        </LinearLayout>
-
-        <LinearLayout
+        <TextView
+            android:id="@+id/tk50"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="left"
+            android:text="0"
+            android:textSize="20dp"></TextView>
 
-            <TextView
-                android:layout_width="15dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:text="50: "
-                android:textSize="20dp"></TextView>
 
-            <TextView
-                android:id="@+id/tk50"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="left"
-                android:text="0"
-                android:textSize="20dp"></TextView>
-        </LinearLayout>
-
-        <LinearLayout
+        <TextView
+            android:id="@+id/tk20"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="left"
+            android:text="0"
+            android:textSize="20dp"></TextView>
 
-            <TextView
-                android:layout_width="15dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:text="20: "
-                android:textSize="20dp"></TextView>
 
-            <TextView
-                android:id="@+id/tk20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="left"
-                android:text="0"
-                android:textSize="20dp"></TextView>
-        </LinearLayout>
-
-        <LinearLayout
+        <TextView
+            android:id="@+id/tk10"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="left"
+            android:text="0"
+            android:textSize="20dp"></TextView>
 
-            <TextView
-                android:layout_width="15dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:text="10: "
-                android:textSize="20dp"></TextView>
 
-            <TextView
-                android:id="@+id/tk10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="left"
-                android:text="0"
-                android:textSize="20dp"></TextView>
-        </LinearLayout>
-
-        <LinearLayout
+        <TextView
+            android:id="@+id/tk5"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="left"
+            android:text="0"
+            android:textSize="20dp"></TextView>
 
-            <TextView
-                android:layout_width="15dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:text="5: "
-                android:textSize="20dp"></TextView>
 
-            <TextView
-                android:id="@+id/tk5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="left"
-                android:text="0"
-                android:textSize="20dp"></TextView>
-        </LinearLayout>
-
-        <LinearLayout
+        <TextView
+            android:id="@+id/tk2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="left"
+            android:text="0"
+            android:textSize="20dp"></TextView>
 
-            <TextView
-                android:layout_width="15dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:text="2: "
-                android:textSize="20dp"></TextView>
 
-            <TextView
-                android:id="@+id/tk2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="left"
-                android:text="0"
-                android:textSize="20dp"></TextView>
-        </LinearLayout>
-
-        <LinearLayout
+        <TextView
+            android:id="@+id/tk1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="left"
+            android:text="0"
+            android:textSize="20dp"></TextView>
 
-            <TextView
-                android:layout_width="15dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:text="1: "
-                android:textSize="20dp"></TextView>
-
-            <TextView
-                android:id="@+id/tk1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="left"
-                android:text="0"
-                android:textSize="20dp"></TextView>
-        </LinearLayout>
     </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
+        android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"

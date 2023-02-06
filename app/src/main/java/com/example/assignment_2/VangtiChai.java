@@ -1,16 +1,23 @@
 package com.example.assignment_2;
 
+import static android.content.ContentValues.TAG;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class VangtiChai extends AppCompatActivity {
     private TextView amountView;
     private String value = "";
-    private int amount = 0;
+    private long amount = 0;
     String key[] = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
     private Button key1, key2, key3, key4, key5, key6, key7, key8, key9, key0, clearKey;
     private TextView tk1, tk2, tk5, tk10, tk20, tk50, tk100, tk200, tk500;
@@ -42,19 +49,20 @@ public class VangtiChai extends AppCompatActivity {
         key0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                amount = Integer.parseInt(amountView.getText().toString());
-                if(amount > 0){
-                    value = Integer.toString(amount)+key[0];
-                    amount = Integer.parseInt(value);
-                }else {
-                    value = Integer.toString(amount)+key[0];
-                    amount = Integer.parseInt(value);
+                if(amountView.getText().toString().length() < 16) { //limiting the length of the digits to 10^16
+                    amount = Long.parseLong(amountView.getText().toString());
+                    if (amount > 0) {
+                        value = Long.toString(amount) + key[0];
+                        amount = Long.parseLong(value);
+                    } else {
+                        value = Long.toString(amount) + key[0];
+                        amount = Long.parseLong(value);
+                    }
+                    amountView.setText(Long.toString(amount));
+                    noteChecker();
                 }
-                amountView.setText(Integer.toString(amount));
-                noteChecker();
             }
         });
-
 
 
         //TODO : key1
@@ -62,34 +70,39 @@ public class VangtiChai extends AppCompatActivity {
         key1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                amount = Integer.parseInt(amountView.getText().toString());
-                if(amount > 0){
-                    value = Integer.toString(amount)+key[1];
-                    amount = Integer.parseInt(value);
-                }else {
-                    value = Integer.toString(amount)+key[1];
-                    amount = Integer.parseInt(value);
+                if(amountView.getText().toString().length() < 16) { //limiting the length of the digits to 10^16
+                    amount = Long.parseLong(amountView.getText().toString());
+                    if (amount > 0) {
+                        value = Long.toString(amount) + key[1];
+                        amount = Long.parseLong(value);
+                    } else {
+                        value = Long.toString(amount) + key[1];
+                        amount = Long.parseLong(value);
+                    }
+                    amountView.setText(Long.toString(amount));
+                    noteChecker();
                 }
-                amountView.setText(Integer.toString(amount));
-                noteChecker();
             }
         });
+
 
         //TODO : key2
         key2 = findViewById(R.id.key2);
         key2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                amount = Integer.parseInt(amountView.getText().toString());
-                if(amount > 0){
-                    value = Integer.toString(amount)+key[2];
-                    amount = Integer.parseInt(value);
-                }else {
-                    value = Integer.toString(amount)+key[2];
-                    amount = Integer.parseInt(value);
+                if(amountView.getText().toString().length() < 16) { //limiting the length of the digits to 10^16
+                    amount = Long.parseLong(amountView.getText().toString());
+                    if (amount > 0) {
+                        value = Long.toString(amount) + key[2];
+                        amount = Long.parseLong(value);
+                    } else {
+                        value = Long.toString(amount) + key[2];
+                        amount = Long.parseLong(value);
+                    }
+                    amountView.setText(Long.toString(amount));
+                    noteChecker();
                 }
-                amountView.setText(Integer.toString(amount));
-                noteChecker();
             }
         });
 
@@ -99,16 +112,18 @@ public class VangtiChai extends AppCompatActivity {
         key3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                amount = Integer.parseInt(amountView.getText().toString());
-                if(amount > 0){
-                    value = Integer.toString(amount)+key[3];
-                    amount = Integer.parseInt(value);
-                }else {
-                    value = Integer.toString(amount)+key[3];
-                    amount = Integer.parseInt(value);
+                if(amountView.getText().toString().length() < 16) { //limiting the length of the digits to 10^16
+                    amount = Long.parseLong(amountView.getText().toString());
+                    if (amount > 0) {
+                        value = Long.toString(amount) + key[3];
+                        amount = Long.parseLong(value);
+                    } else {
+                        value = Long.toString(amount) + key[3];
+                        amount = Long.parseLong(value);
+                    }
+                    amountView.setText(Long.toString(amount));
+                    noteChecker();
                 }
-                amountView.setText(Integer.toString(amount));
-                noteChecker();
             }
         });
 
@@ -118,16 +133,18 @@ public class VangtiChai extends AppCompatActivity {
         key4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                amount = Integer.parseInt(amountView.getText().toString());
-                if(amount > 0){
-                    value = Integer.toString(amount)+key[4];
-                    amount = Integer.parseInt(value);
-                }else {
-                    value = Integer.toString(amount)+key[4];
-                    amount = Integer.parseInt(value);
+                if(amountView.getText().toString().length() < 16) { //limiting the length of the digits to 10^16
+                    amount = Long.parseLong(amountView.getText().toString());
+                    if (amount > 0) {
+                        value = Long.toString(amount) + key[4];
+                        amount = Long.parseLong(value);
+                    } else {
+                        value = Long.toString(amount) + key[4];
+                        amount = Long.parseLong(value);
+                    }
+                    amountView.setText(Long.toString(amount));
+                    noteChecker();
                 }
-                amountView.setText(Integer.toString(amount));
-                noteChecker();
 
             }
         });
@@ -138,16 +155,18 @@ public class VangtiChai extends AppCompatActivity {
         key5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                amount = Integer.parseInt(amountView.getText().toString());
-                if(amount > 0){
-                    value = Integer.toString(amount)+key[5];
-                    amount = Integer.parseInt(value);
-                }else {
-                    value = Integer.toString(amount)+key[5];
-                    amount = Integer.parseInt(value);
+                if(amountView.getText().toString().length() < 16) { //limiting the length of the digits to 10^16
+                    amount = Long.parseLong(amountView.getText().toString());
+                    if (amount > 0) {
+                        value = Long.toString(amount) + key[5];
+                        amount = Long.parseLong(value);
+                    } else {
+                        value = Long.toString(amount) + key[5];
+                        amount = Long.parseLong(value);
+                    }
+                    amountView.setText(Long.toString(amount));
+                    noteChecker();
                 }
-                amountView.setText(Integer.toString(amount));
-                noteChecker();
             }
         });
 
@@ -157,16 +176,18 @@ public class VangtiChai extends AppCompatActivity {
         key6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                amount = Integer.parseInt(amountView.getText().toString());
-                if(amount > 0){
-                    value = Integer.toString(amount)+key[6];
-                    amount = Integer.parseInt(value);
-                }else {
-                    value = Integer.toString(amount)+key[6];
-                    amount = Integer.parseInt(value);
+                if(amountView.getText().toString().length() < 16) { //limiting the length of the digits to 10^16
+                    amount = Long.parseLong(amountView.getText().toString());
+                    if (amount > 0) {
+                        value = Long.toString(amount) + key[6];
+                        amount = Long.parseLong(value);
+                    } else {
+                        value = Long.toString(amount) + key[6];
+                        amount = Long.parseLong(value);
+                    }
+                    amountView.setText(Long.toString(amount));
+                    noteChecker();
                 }
-                amountView.setText(Integer.toString(amount));
-                noteChecker();
             }
         });
 
@@ -176,16 +197,18 @@ public class VangtiChai extends AppCompatActivity {
         key7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                amount = Integer.parseInt(amountView.getText().toString());
-                if(amount > 0){
-                    value = Integer.toString(amount)+key[7];
-                    amount = Integer.parseInt(value);
-                }else {
-                    value = Integer.toString(amount)+key[7];
-                    amount = Integer.parseInt(value);
+                if(amountView.getText().toString().length() < 16) { //limiting the length of the digits to 10^16
+                    amount = Long.parseLong(amountView.getText().toString());
+                    if (amount > 0) {
+                        value = Long.toString(amount) + key[7];
+                        amount = Long.parseLong(value);
+                    } else {
+                        value = Long.toString(amount) + key[7];
+                        amount = Long.parseLong(value);
+                    }
+                    amountView.setText(Long.toString(amount));
+                    noteChecker();
                 }
-                amountView.setText(Integer.toString(amount));
-                noteChecker();
             }
         });
 
@@ -195,19 +218,20 @@ public class VangtiChai extends AppCompatActivity {
         key8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                amount = Integer.parseInt(amountView.getText().toString());
-                if(amount > 0){
-                    value = Integer.toString(amount)+key[8];
-                    amount = Integer.parseInt(value);
-                }else {
-                    value = Integer.toString(amount)+key[8];
-                    amount = Integer.parseInt(value);
+                if(amountView.getText().toString().length() < 16) { //limiting the length of the digits to 10^16
+                    amount = Long.parseLong(amountView.getText().toString());
+                    if (amount > 0) {
+                        value = Long.toString(amount) + key[8];
+                        amount = Long.parseLong(value);
+                    } else {
+                        value = Long.toString(amount) + key[8];
+                        amount = Long.parseLong(value);
+                    }
+                    amountView.setText(Long.toString(amount));
+                    noteChecker();
                 }
-                amountView.setText(Integer.toString(amount));
-                noteChecker();
             }
         });
-
 
 
         //TODO : key9
@@ -215,21 +239,20 @@ public class VangtiChai extends AppCompatActivity {
         key9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                amount = Integer.parseInt(amountView.getText().toString());
-                if(amount > 0){
-                    value = Integer.toString(amount)+key[9];
-                    amount = Integer.parseInt(value);
-                }else {
-                    value = Integer.toString(amount)+key[9];
-                    amount = Integer.parseInt(value);
+                if(amountView.getText().toString().length() < 16) { //limiting the length of the digits to 10^16
+                    amount = Long.parseLong(amountView.getText().toString());
+                    if (amount > 0) {
+                        value = Long.toString(amount) + key[9];
+                        amount = Long.parseLong(value);
+                    } else {
+                        value = Long.toString(amount) + key[9];
+                        amount = Long.parseLong(value);
+                    }
+                    amountView.setText(Long.toString(amount));
+                    noteChecker();
                 }
-                amountView.setText(Integer.toString(amount));
-                noteChecker();
             }
         });
-
-
-
 
 
         //TODO : clearKey
@@ -237,13 +260,71 @@ public class VangtiChai extends AppCompatActivity {
         clearKey.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                amount = Integer.parseInt(amountView.getText().toString());
+                amount = Long.parseLong(amountView.getText().toString());
                 amount = 0;
-                amountView.setText(Integer.toString(amount));
+                amountView.setText(Long.toString(amount));
                 setToZero();
             }
         });
     }
+
+
+
+//    TODO : FOR HANDLING AND SAVING ACTIVITY DATA ON CHANGING SCREEN ORIENTATION
+    private CharSequence data;
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.i(TAG, "onSaveInstanceState: ->");
+        data = amountView.getText();
+        outState.putCharSequence("amountView", data);
+        data = tk1.getText();
+        outState.putCharSequence("tk1", data);
+        data = tk2.getText();
+        outState.putCharSequence("tk2", data);
+        data = tk5.getText();
+        outState.putCharSequence("tk5", data);
+        data = tk10.getText();
+        outState.putCharSequence("tk10", data);
+        data = tk20.getText();
+        outState.putCharSequence("tk20", data);
+        data = tk50.getText();
+        outState.putCharSequence("tk50", data);
+        data = tk100.getText();
+        outState.putCharSequence("tk100", data);
+        data = tk200.getText();
+        outState.putCharSequence("tk200", data);
+        data = tk500.getText();
+        outState.putCharSequence("tk500", data);
+    }
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        Log.i(TAG, "onRestoreInstanceState: ->");
+        data = savedInstanceState.getCharSequence("amountView");
+        amountView.setText(data);
+        data = savedInstanceState.getCharSequence("tk1");
+        tk1.setText(data);
+        data = savedInstanceState.getCharSequence("tk2");
+        tk2.setText(data);
+        data = savedInstanceState.getCharSequence("tk5");
+        tk5.setText(data);
+        data = savedInstanceState.getCharSequence("tk10");
+        tk10.setText(data);
+        data = savedInstanceState.getCharSequence("tk20");
+        tk20.setText(data);
+        data = savedInstanceState.getCharSequence("tk50");
+        tk50.setText(data);
+        data = savedInstanceState.getCharSequence("tk100");
+        tk100.setText(data);
+        data = savedInstanceState.getCharSequence("tk200");
+        tk200.setText(data);
+        data = savedInstanceState.getCharSequence("tk500");
+        tk500.setText(data);
+    }
+
+
+
 
 
     private void setToZero(){
@@ -259,60 +340,79 @@ public class VangtiChai extends AppCompatActivity {
     }
 
     private void noteChecker(){
-        int val = 0;
+        long val = 0;
         setToZero();
-
-
-
-
 
         if(amount >= 500){
             val = amount/500;
             amount = amount - val*500;
-            tk500.setText(Integer.toString(val));
+            tk500.setText(Long.toString(val));
         }
         if(amount >= 200){
             val = amount/200;
             amount = amount - val*200;
-            tk200.setText(Integer.toString(val));
+            tk200.setText(Long.toString(val));
         }
         if(amount >= 100){
             val = amount/100;
             amount = amount - val*100;
-            tk100.setText(Integer.toString(val));
+            tk100.setText(Long.toString(val));
         }
         if(amount >= 50){
             val = amount/50;
             amount = amount - val*50;
-            tk50.setText(Integer.toString(val));
+            tk50.setText(Long.toString(val));
         }
         if(amount >= 20){
             val = amount/20;
             amount = amount - val*20;
-            tk20.setText(Integer.toString(val));
+            tk20.setText(Long.toString(val));
         }
         if(amount >= 10){
             val = amount/10;
             amount = amount - val*10;
-            tk10.setText(Integer.toString(val));
+            tk10.setText(Long.toString(val));
         }
         if(amount >= 5){
             val = amount/5;
             amount = amount - val*5;
-            tk5.setText(Integer.toString(val));
+            tk5.setText(Long.toString(val));
         }
         if(amount >= 2){
             val = amount/2;
             amount = amount - val*2;
-            tk2.setText(Integer.toString(val));
+            tk2.setText(Long.toString(val));
         }
         if(amount >= 1){
             val = amount/1;
             amount = amount - val*1;
-            tk1.setText(Integer.toString(val));
+            tk1.setText(Long.toString(val));
         }
 
 
     }
+
+
+//    TODO : https://stackoverflow.com/questions/8430805/clicking-the-back-button-twice-to-exit-an-activity
+//  pressing twice to exit
+    boolean isDoubleBackToExitPressedOnce = false;
+    @Override
+    public void onBackPressed() {
+        if(isDoubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
+        }
+
+        isDoubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Please click Back again to exit", Toast.LENGTH_SHORT).show();
+
+        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                isDoubleBackToExitPressedOnce = false;
+            }
+        }, 1000);
+    }
+
 
 }
