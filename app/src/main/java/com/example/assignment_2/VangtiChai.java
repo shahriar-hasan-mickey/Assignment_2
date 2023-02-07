@@ -45,215 +45,34 @@ public class VangtiChai extends AppCompatActivity {
 
 
         //TODO : key0
-        key0 = findViewById(R.id.key0);
-        key0.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(amountView.getText().toString().length() < 16) { //limiting the length of the digits to 10^16
-                    amount = Long.parseLong(amountView.getText().toString());
-                    if (amount > 0) {
-                        value = Long.toString(amount) + key[0];
-                        amount = Long.parseLong(value);
-                    } else {
-                        value = Long.toString(amount) + key[0];
-                        amount = Long.parseLong(value);
-                    }
-                    amountView.setText(Long.toString(amount));
-                    noteChecker();
-                }
-            }
-        });
-
+        keyClicker(findViewById(R.id.key0), 0);
 
         //TODO : key1
-        key1 = findViewById(R.id.key1);
-        key1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(amountView.getText().toString().length() < 16) { //limiting the length of the digits to 10^16
-                    amount = Long.parseLong(amountView.getText().toString());
-                    if (amount > 0) {
-                        value = Long.toString(amount) + key[1];
-                        amount = Long.parseLong(value);
-                    } else {
-                        value = Long.toString(amount) + key[1];
-                        amount = Long.parseLong(value);
-                    }
-                    amountView.setText(Long.toString(amount));
-                    noteChecker();
-                }
-            }
-        });
-
+        keyClicker(findViewById(R.id.key1), 1);
 
         //TODO : key2
-        key2 = findViewById(R.id.key2);
-        key2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(amountView.getText().toString().length() < 16) { //limiting the length of the digits to 10^16
-                    amount = Long.parseLong(amountView.getText().toString());
-                    if (amount > 0) {
-                        value = Long.toString(amount) + key[2];
-                        amount = Long.parseLong(value);
-                    } else {
-                        value = Long.toString(amount) + key[2];
-                        amount = Long.parseLong(value);
-                    }
-                    amountView.setText(Long.toString(amount));
-                    noteChecker();
-                }
-            }
-        });
-
+        keyClicker(findViewById(R.id.key2), 2);
 
         //TODO : key3
-        key3 = findViewById(R.id.key3);
-        key3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(amountView.getText().toString().length() < 16) { //limiting the length of the digits to 10^16
-                    amount = Long.parseLong(amountView.getText().toString());
-                    if (amount > 0) {
-                        value = Long.toString(amount) + key[3];
-                        amount = Long.parseLong(value);
-                    } else {
-                        value = Long.toString(amount) + key[3];
-                        amount = Long.parseLong(value);
-                    }
-                    amountView.setText(Long.toString(amount));
-                    noteChecker();
-                }
-            }
-        });
-
+        keyClicker(findViewById(R.id.key3), 3);
 
         //TODO : key4
-        key4 = findViewById(R.id.key4);
-        key4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(amountView.getText().toString().length() < 16) { //limiting the length of the digits to 10^16
-                    amount = Long.parseLong(amountView.getText().toString());
-                    if (amount > 0) {
-                        value = Long.toString(amount) + key[4];
-                        amount = Long.parseLong(value);
-                    } else {
-                        value = Long.toString(amount) + key[4];
-                        amount = Long.parseLong(value);
-                    }
-                    amountView.setText(Long.toString(amount));
-                    noteChecker();
-                }
-
-            }
-        });
-
+        keyClicker(findViewById(R.id.key4), 4);
 
         //TODO : key5
-        key5 = findViewById(R.id.key5);
-        key5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(amountView.getText().toString().length() < 16) { //limiting the length of the digits to 10^16
-                    amount = Long.parseLong(amountView.getText().toString());
-                    if (amount > 0) {
-                        value = Long.toString(amount) + key[5];
-                        amount = Long.parseLong(value);
-                    } else {
-                        value = Long.toString(amount) + key[5];
-                        amount = Long.parseLong(value);
-                    }
-                    amountView.setText(Long.toString(amount));
-                    noteChecker();
-                }
-            }
-        });
-
+        keyClicker(findViewById(R.id.key5), 5);
 
         //TODO : key6
-        key6 = findViewById(R.id.key6);
-        key6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(amountView.getText().toString().length() < 16) { //limiting the length of the digits to 10^16
-                    amount = Long.parseLong(amountView.getText().toString());
-                    if (amount > 0) {
-                        value = Long.toString(amount) + key[6];
-                        amount = Long.parseLong(value);
-                    } else {
-                        value = Long.toString(amount) + key[6];
-                        amount = Long.parseLong(value);
-                    }
-                    amountView.setText(Long.toString(amount));
-                    noteChecker();
-                }
-            }
-        });
-
+        keyClicker(findViewById(R.id.key6), 6);
 
         //TODO : key7
-        key7 = findViewById(R.id.key7);
-        key7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(amountView.getText().toString().length() < 16) { //limiting the length of the digits to 10^16
-                    amount = Long.parseLong(amountView.getText().toString());
-                    if (amount > 0) {
-                        value = Long.toString(amount) + key[7];
-                        amount = Long.parseLong(value);
-                    } else {
-                        value = Long.toString(amount) + key[7];
-                        amount = Long.parseLong(value);
-                    }
-                    amountView.setText(Long.toString(amount));
-                    noteChecker();
-                }
-            }
-        });
-
+        keyClicker(findViewById(R.id.key7), 7);
 
         //TODO : key8
-        key8 = findViewById(R.id.key8);
-        key8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(amountView.getText().toString().length() < 16) { //limiting the length of the digits to 10^16
-                    amount = Long.parseLong(amountView.getText().toString());
-                    if (amount > 0) {
-                        value = Long.toString(amount) + key[8];
-                        amount = Long.parseLong(value);
-                    } else {
-                        value = Long.toString(amount) + key[8];
-                        amount = Long.parseLong(value);
-                    }
-                    amountView.setText(Long.toString(amount));
-                    noteChecker();
-                }
-            }
-        });
-
+        keyClicker(findViewById(R.id.key8), 8);
 
         //TODO : key9
-        key9 = findViewById(R.id.key9);
-        key9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(amountView.getText().toString().length() < 16) { //limiting the length of the digits to 10^16
-                    amount = Long.parseLong(amountView.getText().toString());
-                    if (amount > 0) {
-                        value = Long.toString(amount) + key[9];
-                        amount = Long.parseLong(value);
-                    } else {
-                        value = Long.toString(amount) + key[9];
-                        amount = Long.parseLong(value);
-                    }
-                    amountView.setText(Long.toString(amount));
-                    noteChecker();
-                }
-            }
-        });
-
+        keyClicker(findViewById(R.id.key9), 9);
 
         //TODO : clearKey
         clearKey = findViewById(R.id.clearKey);
@@ -323,6 +142,29 @@ public class VangtiChai extends AppCompatActivity {
         tk500.setText(data);
     }
 
+
+
+
+
+    private void keyClicker(Button btnId, int index){
+        btnId.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(amountView.getText().toString().length() < 16) { //limiting the length of the digits to 10^16
+                    amount = Long.parseLong(amountView.getText().toString());
+                    if (amount > 0) {
+                        value = Long.toString(amount) + key[index];
+                        amount = Long.parseLong(value);
+                    } else {
+                        value = Long.toString(amount) + key[index];
+                        amount = Long.parseLong(value);
+                    }
+                    amountView.setText(Long.toString(amount));
+                    noteChecker();
+                }
+            }
+        });
+    }
 
 
 
